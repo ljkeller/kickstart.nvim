@@ -8,6 +8,7 @@ return {
     opts = {
       on_attach = function(bufnr)
         local gitsigns = require 'gitsigns'
+        print('Gitsigns attached to buffer ' .. bufnr)
 
         local function map(mode, l, r, opts)
           opts = opts or {}
