@@ -7,6 +7,14 @@ return {
     'hiphish/rainbow-delimiters.nvim',
   },
   {
+    'sindrets/diffview.nvim',
+    opts = {
+      default_args = {
+        DiffviewOpen = { '--imply-local' },
+      },
+    },
+  },
+  {
     'stevearc/oil.nvim',
     opts = {},
     dependencies = { 'nvim-tree/nvim-web-devicons' },
