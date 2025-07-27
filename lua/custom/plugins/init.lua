@@ -4,6 +4,9 @@
 -- See the kickstart.nvim README for more information
 return {
   {
+    'hiphish/rainbow-delimiters.nvim',
+  },
+  {
     'stevearc/oil.nvim',
     opts = {},
     dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -30,6 +33,7 @@ return {
     cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
     ft = { 'markdown' },
     build = function()
+      require('lazy').load { plugins = { 'markdown-preview.nvim' } }
       vim.fn['mkdp#util#install']()
     end,
   },
